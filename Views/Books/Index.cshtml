@@ -1,0 +1,32 @@
+﻿@* Nous aurons pas besoin d'un Model Car nous alllons Tout Charger al'aide D'un Tableau de Données *@
+<br />
+<!--il s'agit là d'un Div Principale-->
+<div class="container row p-0 m-0">
+    <div class="col-6">
+        <h2 class="text-info">Book List</h2>
+    </div>
+    <!--Le Offset pour decaler le Boutton vers la droite-->
+    <div class="col-3 offset-3">
+      <a asp-action="Upsert" asp-controller="Books" class="btn btn-info form-control text-white">Add New Book </a>
+    </div>
+    <!--utilisation d'un Div avec une Colonne de 12 pour construire notre Tableau Principale-->
+    <!-- nous allons ajouter une Bordure Pour notre Table Principale grâce a Bootstrap -->
+    <div class="col-12 border container">
+        <table id="DT_load" class=" table table-striped table-bordered" style="width:100%">
+            <!--nous allons definir les Schemas a ce niveau Sachant que le schema est defini par les colonne d'un table  -->
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Author </th>
+                <th> ISBN </th>
+                <th>Action </th>
+            </tr>
+        </thead>
+        
+        </table>
+    </div>
+</div>
+@section scripts{
+<script src="~/js/BookList.js"></script>
+
+ }
